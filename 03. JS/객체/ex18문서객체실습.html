@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        👽<span id="like">0</span>
+    </div>
+    <button onclick = "plus()">좋아요</button>
+    <button onclick = "minus()">싫어요</button>
+
+    <script>
+        // 실습문제) 버튼을 눌렀을 때 숫자가 변경되는 함수를 구현하시오.
+        //  1) 좋아요 버튼 : 숫자가 1씩 증가
+        //  2) 싫어요 버튼 : 숫자가 1씩 감소
+
+        let count = 0;
+
+        let likeCount = function(){
+            const like = document.getElementById("like");
+            like.innerText = ++count;
+            
+        }
+
+        let dislikeCount = function(){
+            const dislike = document.getElementById("like");
+            like.innerText = --count;
+        }
+
+        let plus = function(){
+            const like = document.getElementById("like");
+            like.innerText = parseInt(like.innerText) + 1;
+        }
+
+        let minus = function(){
+            const like = document.getElementById("like");
+            like.innerText = parseInt(like.innerText) - 1;
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
